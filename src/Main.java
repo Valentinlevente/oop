@@ -20,5 +20,38 @@ public class Main {
         System.out.println(p6);
         //-------------- Pontok -------------//
 
+        //-------------- Korok --------------//
+
+        Kor k1 = new Kor(5);
+        System.out.println(k1);
+        System.out.println(k1.getCircumference());
+        System.out.println(k1.getArea());
+        k1.grow(6);
+        System.out.println(k1);
+        k1.shrink(4);
+        System.out.println(k1);
+        System.out.println();
+
+        Kor[] korok = new Kor[10];
+        for (int i = 0; i < korok.length; i++){
+            korok[i] = new Kor();
+            System.out.println(korok[i]);
+
+        }
+        int indexOfLargestArea = 0;
+        double max = 0;
+        for (int i = 0; i < korok.length; i++){
+            if(korok[i].getArea() > max){
+                max = korok[i].getArea();
+                indexOfLargestArea = i + 1;
+            }
+        }
+        System.out.println("A kör a legnagyobb területtel a " + indexOfLargestArea + ".-ik " + max + "-al.");
+
+
+
+
+        //-------------- Korok --------------//
+
     }
 }
